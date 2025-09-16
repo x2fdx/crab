@@ -4,22 +4,19 @@
 <head>
 <title>Moving Crystal Crab</title>
 <style>
-  /* This ensures the animation has a full-width container to move in */
   body {
     position: relative;
     min-height: 100vh;
     margin: 0;
-    overflow-x: hidden; /* Prevents horizontal scrollbar */
+    overflow-x: hidden;
   }
 
   #pot {
-    /* The container for the moving image */
     bottom: 15%;
     position: absolute;
     
-    /* Animation settings */
     animation-name: run;
-    animation-duration: 8s; /* Slowed it down a bit */
+    animation-duration: 8s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
@@ -27,23 +24,19 @@
   @keyframes run {
     0% {
       left: 0;
-      transform: rotateY(0deg); /* Facing right */
+      transform: rotateY(0deg);
     }
     48% {
-      /* Just before turning, still facing right */
       transform: rotateY(0deg); 
     }
     50% { 
-      /* At the right edge, flips to face left */
-      left: calc(100% - 150px); /* IMPORTANT: This matches the image width */
+      left: calc(100% - 150px);
       transform: rotateY(180deg); 
     }
     98% {
-      /* Just before turning back, still facing left */
       transform: rotateY(180deg); 
     }
     100% {
-      /* Back at the left edge, flips to face right again */
       left: 0;    
       transform: rotateY(0deg);
     }
@@ -53,10 +46,10 @@
 <body>
 
   <div id="pot">
-    <!-- The image is now your local file. I made it wider to look better. -->
     <img src="file:///D:/Stream%20files/crab/crystal_crab.png" width="1200px">
   </div>
 
 </body>
 </html>
+
 
